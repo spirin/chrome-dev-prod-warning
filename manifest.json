@@ -1,0 +1,15 @@
+{
+	"manifest_version" : 2,
+	"name" : "Предупреждение для боевого сервера",
+	"description" : "Предупреждение для боевого сервера",
+	"version" : "1.1",
+	"browser_action" : {
+		"default_icon" : "128.png"
+	},
+	"content_scripts" : [{
+			"matches" : ["https://example.com/*", "https://*.example.com/*"],
+			"exclude_matches" : ["https://*.dev.example.com/*"],
+			"js" : ["warn.js"]
+		}
+	]
+}
